@@ -11,7 +11,7 @@ jobs:
     steps:
 
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Extract version from pubspec.yaml
         id: extract_version
@@ -88,3 +88,4 @@ jobs:
           artifacts: "build/app/outputs/apk/release/*_arm64.apk"
           tag: v${{ env.VERSION }}
           token: ${{ secrets.TOKEN }}
+
