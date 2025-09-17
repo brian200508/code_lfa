@@ -44,9 +44,11 @@ packages:
   behavior_api:
     dependency: "direct main"
     description:
-      path: "../../nightmare-space/behavior_api"
-      relative: true
-    source: path
+      path: behavior_api
+      ref: HEAD
+      resolved-ref: "352ac8cc0cd25ef7e12ae297926dca56e29e70ba"
+      url: "https://github.com/nightmare-space/empty_package"
+    source: git
     version: "1.0.0"
   boolean_selector:
     dependency: transitive
@@ -240,9 +242,11 @@ packages:
   global_repository:
     dependency: "direct main"
     description:
-      path: "../../nightmare-space/global_repository"
-      relative: true
-    source: path
+      path: "."
+      ref: HEAD
+      resolved-ref: "35a3d09a7a643ecfe47947b9254334a150313bc0"
+      url: "https://github.com/nightmare-space/global_repository"
+    source: git
     version: "0.0.1"
   hive:
     dependency: transitive
@@ -284,14 +288,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.8.11"
-  json_annotation:
-    dependency: transitive
-    description:
-      name: json_annotation
-      sha256: "1ce844379ca14835a50d2f019a3099f419082cfdd231cd86a142af94dd5c6bb1"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.9.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -384,10 +380,10 @@ packages:
     dependency: "direct overridden"
     description:
       name: permission_handler
-      sha256: "59adad729136f01ea9e35a48f5d1395e25cba6cea552249ddbe9cf950f5d7849"
+      sha256: "18bf33f7fefbd812f37e72091a15575e72d5318854877e0e4035a24ac1113ecb"
       url: "https://pub.dev"
     source: hosted
-    version: "11.4.0"
+    version: "11.3.1"
   permission_handler_android:
     dependency: transitive
     description:
@@ -476,14 +472,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.1"
-  retrofit:
-    dependency: transitive
-    description:
-      name: retrofit
-      sha256: "699cf44ec6c7fc7d248740932eca75d334e36bdafe0a8b3e9ff93100591c8a25"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.7.2"
   screen_retriever:
     dependency: transitive
     description:
@@ -709,9 +697,11 @@ packages:
   xterm:
     dependency: "direct main"
     description:
-      path: "/Users/lori/Desktop/Nightmare/github_repo/xterm.dart"
-      relative: false
-    source: path
+      path: "."
+      ref: master
+      resolved-ref: d35ba2cc72d0b89b0fd19af69d57df2c02f26a16
+      url: "https://github.com/TerminalStudio/xterm.dart"
+    source: git
     version: "4.0.0"
   yaml:
     dependency: transitive
