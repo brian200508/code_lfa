@@ -85,7 +85,7 @@ class _TerminalPageState extends State<TerminalPage> {
                                       Container(
                                         height: 5.w,
                                         decoration: BoxDecoration(
-                                          color: Theme.of(context).colorScheme.primary.opacity02,
+                                          color: Theme.of(context).colorScheme.primary.withAlpha((0.2 * 255).toInt()),
                                           borderRadius: BorderRadius.circular(3.w),
                                         ),
                                       ),
