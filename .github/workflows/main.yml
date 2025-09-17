@@ -76,7 +76,7 @@ jobs:
           mv build/app/outputs/apk/release/app-x86_64-*release.apk "build/app/outputs/apk/release/CodeFA_${{ env.VERSION }}_Android_x86_64.apk"
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Releases
           path: |
@@ -88,4 +88,5 @@ jobs:
           artifacts: "build/app/outputs/apk/release/*_arm64.apk"
           tag: v${{ env.VERSION }}
           token: ${{ secrets.TOKEN }}
+
 
