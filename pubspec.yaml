@@ -1,8 +1,8 @@
 name: code_lfa
 description: VS Code for Android
 publish_to: "none" # Remove this line if you wish to publish to pub.dev
-version: 1.6.0+22-cs4.104.1
-code_server: 4.104.1
+version: 1.6.0+22-cs4.104.2
+code_server: 4.104.2
 environment:
   sdk: ">=3.3.0 <4.0.0"
 
