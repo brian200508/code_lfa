@@ -26,16 +26,16 @@ Cheers! 🍻
 ## Features
 
 - Fully local operation of Code Server
-- Supports the latest version 4.108.2
+- Supports the latest version 4.109.2
 - Supports quick updates to Code-Server versions
 - Supports custom Code-Server versions
 - Can run without an internet connection
 
 ## Changing Code-Server Version
 
-1. Create a file named `code_version` in /sdcard with the version number as its content, such as `4.108.2`, without any line breaks.
+1. Create a file named `code_version` in /sdcard with the version number as its content, such as `4.109.2`, without any line breaks.
 
-2. Download code-server such as [code-server-4.108.2-linux-arm64.tar.gz](https://github.com/coder/code-server/releases/download/v4.13.0/code-server-4.108.2-linux-arm64.tar.gz)
+2. Download code-server such as [code-server-4.109.2-linux-arm64.tar.gz](https://github.com/coder/code-server/releases/download/v4.13.0/code-server-4.109.2-linux-arm64.tar.gz)
 
 3. Place the downloaded file in /sdcard. Do not unzip or change its filename.
 
