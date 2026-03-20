@@ -1,5 +1,5 @@
 const bool product = bool.fromEnvironment('dart.vm.product');
-const String debugCSV = '4.109.5';
+const String debugCSV = '4.112.0';
 
 class Config {
   Config._();
