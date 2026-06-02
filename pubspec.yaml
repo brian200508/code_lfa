@@ -12,7 +12,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   # pub repo
-  signale: ^0.0.9
+  signale: ^0.0.12
   intl: ^0.19.0
   archive: ^4.0.7
   async: ^2.11.0
