@@ -25,7 +25,7 @@ jobs:
         run:  wget -O assets/code-server-${{ env.CSVERSION }}-linux-arm64.tar.gz https://github.com/coder/code-server/releases/download/v${{ env.CSVERSION }}/code-server-${{ env.CSVERSION }}-linux-arm64.tar.gz
 
       - name: Set Up Java
-        uses: actions/setup-java@v5.2.0
+        uses: actions/setup-java@v5.4.0
         with:
           distribution: 'oracle'
           java-version: '17'
