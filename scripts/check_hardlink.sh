@@ -1,1 +1,1 @@
-tar tvf 'assets/code-server-4.129.0-linux-arm64.tar.gz' | grep '^hr'
+tar tvf 'assets/code-server-4.131.0-linux-arm64.tar.gz' | grep '^hr'

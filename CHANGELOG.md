@@ -1,6 +1,6 @@
 ## 1.6.0
 - Upgrade proot-distro 4.28.0
-- Upgrade code-server to 4.129.0
+- Upgrade code-server to 4.131.0
 - Upgrade ubuntu to noble-aarch64-pd-v4.18.0
 - 优化进度条逻辑，不再使用`魔数`
 - 支持 I18n，目前支持中文和英语
