@@ -202,7 +202,7 @@ class HomeController extends GetxController {
   }
 
   Future<void> loadCodeServer() async {
-    loadCodeVersion();
+    await loadCodeVersion();
     bumpProgress();
     // 创建相关文件夹
     // Create related folders
@@ -237,10 +237,14 @@ class HomeController extends GetxController {
       if (useCustomCodeServer) {
         File codeServerOnSdcard = File(sourcePath);
         File targetFile = File('${RuntimeEnvir.tmpPath}/$codeServerName');
-        if (targetFile.lengthSync() == codeServerOnSdcard.lengthSync()) {
-          Log.i('code server already copied, skip');
+        if (targetFile.existsSync() && targetFile.lengthSync() == codeServerOnSdcard.lengthSync()) {
+          Log.i('code server already copied to tmp, skip');
+        } else {
+          if (targetFile.existsSync()) {
+            targetFile.deleteSync();
+          }
+          await codeServerOnSdcard.copy(targetFile.path);
         }
-        await codeServerOnSdcard.copy(targetFile.path);
       } else {
         await AssetsUtils.copyAssetToPath(
           sourcePath,
