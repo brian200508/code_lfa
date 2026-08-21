@@ -7,7 +7,16 @@ plugins {
 // start
 def keystorePropertiesFile = rootProject.file('key.properties')
 def keystoreProperties = new Properties()
-keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+} else {
+    // Set default/dummy values for CI/CD environments
+    keystoreProperties['keyAlias'] = System.getenv('KEY_ALIAS') ?: 'dummy'
+    keystoreProperties['keyPassword'] = System.getenv('KEY_PASSWORD') ?: 'dummy'
+    keystoreProperties['storeFile'] = System.getenv('STORE_FILE') ?: 'dummy.jks'
+    keystoreProperties['storePassword'] = System.getenv('STORE_PASSWORD') ?: 'dummy'
+}
 // end
 android {
     namespace 'com.nightmare.code'
