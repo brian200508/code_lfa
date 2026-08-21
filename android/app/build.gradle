@@ -1,7 +1,6 @@
 
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
     id 'dev.flutter.flutter-gradle-plugin'
 }
 // 本地编译注释以下代码
