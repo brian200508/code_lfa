@@ -134,12 +134,7 @@ class CustomKeyboardController extends GetxController {
   /// Send a single key to terminal
   void sendKey(String key) {
     try {
-      terminal.keyboard.sendKey(
-        key: key,
-        ctrl: false,
-        alt: false,
-        shift: false,
-      );
+      terminal.textInput(_keyToEscapeSequence(key));
     } catch (e) {
       Get.snackbar(
         'Error',
@@ -167,12 +162,7 @@ class CustomKeyboardController extends GetxController {
       }
 
       if (mainKey != null) {
-        terminal.keyboard.sendKey(
-          key: mainKey,
-          ctrl: ctrl,
-          alt: alt,
-          shift: shift,
-        );
+        terminal.textInput(_keyToEscapeSequence(mainKey, ctrl: ctrl, alt: alt, shift: shift));
       }
     } catch (e) {
       Get.snackbar(
@@ -181,6 +171,48 @@ class CustomKeyboardController extends GetxController {
         snackPosition: SnackPosition.BOTTOM,
       );
     }
+  }
+
+  /// Convert key names to appropriate escape sequences
+  String _keyToEscapeSequence(String key, {bool ctrl = false, bool alt = false, bool shift = false}) {
+    String sequence = '';
+    
+    // Handle special keys that need escape sequences
+    switch (key.toLowerCase()) {
+      case 'arrowup':
+        sequence = '\x1b[A';
+        break;
+      case 'arrowdown':
+        sequence = '\x1b[B';
+        break;
+      case 'arrowright':
+        sequence = '\x1b[C';
+        break;
+      case 'arrowleft':
+        sequence = '\x1b[D';
+        break;
+      case 'escape':
+      case 'esc':
+        sequence = '\x1b';
+        break;
+      case 'tab':
+        sequence = '\t';
+        break;
+      case 'enter':
+      case 'return':
+        sequence = '\r';
+        break;
+      default:
+        sequence = key;
+    }
+
+    // Handle Ctrl modifier for letter keys
+    if (ctrl && sequence.length == 1 && sequence.codeUnitAt(0) >= 97 && sequence.codeUnitAt(0) <= 122) {
+      // Convert lowercase letter to control character (a=1, b=2, ..., z=26)
+      sequence = String.fromCharCode(sequence.codeUnitAt(0) - 96);
+    }
+
+    return sequence;
   }
 
   /// Handle button press
