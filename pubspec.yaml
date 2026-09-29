@@ -17,7 +17,7 @@ dependencies:
   archive: ^4.0.7
   async: ^2.11.0
   dio: ^5.7.0
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^2.0.0
   get: ^4.6.5
   device_info_plus: ^13.0.0
   tar: ^2.0.0
